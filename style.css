@@ -196,7 +196,6 @@ header {
     border-bottom: 1px solid var(--gray-200);
     padding: var(--space-sm) 0;
     box-shadow: var(--shadow-lg);
-    position: relative;
     width: 100%;
     z-index: 9999;
     transition: all var(--transition-normal);
@@ -568,6 +567,19 @@ footer p {
     animation: fadeInUp 0.6s ease-out;
 }
 
+/* --- Fixed Header for desktop and scrolling for mobile --- */
+@media (min-width: 769px) {
+    header {
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
+    
+    body {
+        padding-top: 60px;
+    }
+}
+
 /* --- Enhanced Responsive Design --- */
 @media (max-width: 1024px) {
     .container {
@@ -589,7 +601,7 @@ footer p {
 
 @media (max-width: 768px) {
     body {
-        padding-top: 0;
+        padding-top: 0; /* Remove padding for mobile where the header is not fixed */
     }
 
     .section-padding {
@@ -869,13 +881,3 @@ ul li::before {
     color: var(--primary-blue);
     font-weight: bold;
 }
-
-
-
-
-
-
-
-
-
-
