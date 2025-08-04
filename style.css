@@ -89,6 +89,7 @@ body {
     padding-top: 80px;
     overflow-x: hidden;
     min-height: 100vh;
+    margin: 0;
 }
 
 /* --- Typography System --- */
@@ -591,7 +592,7 @@ footer p {
 
 @media (max-width: 768px) {
     body {
-        padding-top: 120px;
+        padding-top: 80px;
     }
 
     .section-padding {
@@ -611,39 +612,50 @@ footer p {
     }
 
     header {
-        padding: var(--space-xs) 0;
+        padding: 4px 0;
+        min-height: 70px;
     }
 
     header .container {
-        flex-direction: column;
-        text-align: center;
-        gap: var(--space-sm);
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: var(--space-xs);
         padding: 0 var(--space-sm);
+        min-height: 60px;
     }
 
     .site-logo {
         margin-bottom: 0;
+        flex-shrink: 0;
     }
 
     .header-logo {
-        max-height: 50px;
+        max-height: 40px;
         width: auto;
+    }
+
+    .main-nav {
+        flex: 1;
+        display: flex;
+        justify-content: flex-end;
     }
 
     .main-nav ul {
         flex-direction: row;
         flex-wrap: wrap;
-        gap: var(--space-xs);
-        width: 100%;
-        justify-content: center;
+        gap: 4px;
+        justify-content: flex-end;
+        margin: 0;
     }
 
     .main-nav li a {
-        padding: var(--space-xs) var(--space-sm);
+        padding: 6px 8px;
         display: block;
         text-align: center;
-        font-size: 0.9rem;
+        font-size: 0.8rem;
         white-space: nowrap;
+        border-radius: var(--radius-sm);
     }
 
     .hero-bg {
@@ -678,11 +690,11 @@ footer p {
 
 @media (max-width: 480px) {
     body {
-        padding-top: 110px;
+        padding-top: 70px;
     }
     
     .container {
-        padding: 0 var(--space-sm);
+        padding: 0 var(--space-sm);s
     }
     
     .section-padding {
@@ -693,13 +705,19 @@ footer p {
         font-size: 1.75rem;
     }
 
+    header {
+        padding: 2px 0;
+        min-height: 60px;
+    }
+
     header .container {
         padding: 0 var(--space-xs);
         gap: var(--space-xs);
+        min-height: 55px;
     }
 
     .header-logo {
-        max-height: 45px;
+        max-height: 35px;
         width: auto;
     }
 
@@ -708,8 +726,8 @@ footer p {
     }
 
     .main-nav li a {
-        padding: 6px 8px;
-        font-size: 0.8rem;
+        padding: 4px 6px;
+        font-size: 0.75rem;
     }
 
     .hero-content {
@@ -730,16 +748,22 @@ footer p {
 /* --- Additional Mobile Responsiveness --- */
 @media (max-width: 360px) {
     body {
-        padding-top: 100px;
+        padding-top: 65px;
+    }
+    
+    header {
+        padding: 1px 0;
+        min-height: 55px;
     }
     
     header .container {
         padding: 0 4px;
         gap: 4px;
+        min-height: 50px;
     }
     
     .header-logo {
-        max-height: 40px;
+        max-height: 30px;
         width: auto;
     }
     
@@ -748,8 +772,8 @@ footer p {
     }
     
     .main-nav li a {
-        padding: 4px 6px;
-        font-size: 0.75rem;
+        padding: 3px 5px;
+        font-size: 0.7rem;
     }
 }
 
