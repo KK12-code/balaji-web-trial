@@ -86,7 +86,6 @@ body {
     background: url('https://mir-s3-cdn-cf.behance.net/project_modules/fs/4e0cc328008799.56e41b35c50a5.gif') center/cover no-repeat fixed;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    padding-top: 80px;
     overflow-x: hidden;
     min-height: 100vh;
     margin: 0;
@@ -197,10 +196,8 @@ header {
     border-bottom: 1px solid var(--gray-200);
     padding: var(--space-sm) 0;
     box-shadow: var(--shadow-lg);
-    position: fixed;
+    position: relative;
     width: 100%;
-    top: 0;
-    left: 0;
     z-index: 9999;
     transition: all var(--transition-normal);
     min-height: 60px;
@@ -592,7 +589,7 @@ footer p {
 
 @media (max-width: 768px) {
     body {
-        padding-top: 80px;
+        padding-top: 0;
     }
 
     .section-padding {
@@ -690,11 +687,11 @@ footer p {
 
 @media (max-width: 480px) {
     body {
-        padding-top: 70px;
+        padding-top: 0;
     }
     
     .container {
-        padding: 0 var(--space-sm);s
+        padding: 0 var(--space-sm);
     }
     
     .section-padding {
@@ -748,7 +745,7 @@ footer p {
 /* --- Additional Mobile Responsiveness --- */
 @media (max-width: 360px) {
     body {
-        padding-top: 65px;
+        padding-top: 0;
     }
     
     header {
