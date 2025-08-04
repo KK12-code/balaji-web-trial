@@ -200,8 +200,9 @@ header {
     width: 100%;
     top: 0;
     left: 0;
-    z-index: 1000;
+    z-index: 9999;
     transition: all var(--transition-normal);
+    min-height: 60px;
 }
 
 header .container {
@@ -209,6 +210,7 @@ header .container {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+    min-height: 60px;
 }
 
 .site-logo {
@@ -589,7 +591,7 @@ footer p {
 
 @media (max-width: 768px) {
     body {
-        padding-top: 100px;
+        padding-top: 120px;
     }
 
     .section-padding {
@@ -608,26 +610,40 @@ footer p {
         padding-left: var(--space-md);
     }
 
+    header {
+        padding: var(--space-xs) 0;
+    }
+
     header .container {
         flex-direction: column;
         text-align: center;
-        gap: var(--space-md);
+        gap: var(--space-sm);
+        padding: 0 var(--space-sm);
     }
 
     .site-logo {
         margin-bottom: 0;
     }
 
+    .header-logo {
+        max-height: 50px;
+        width: auto;
+    }
+
     .main-nav ul {
-        flex-direction: column;
-        gap: var(--space-sm);
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: var(--space-xs);
         width: 100%;
+        justify-content: center;
     }
 
     .main-nav li a {
-        padding: var(--space-sm) var(--space-lg);
+        padding: var(--space-xs) var(--space-sm);
         display: block;
         text-align: center;
+        font-size: 0.9rem;
+        white-space: nowrap;
     }
 
     .hero-bg {
@@ -662,7 +678,7 @@ footer p {
 
 @media (max-width: 480px) {
     body {
-        padding-top: 90px;
+        padding-top: 110px;
     }
     
     .container {
@@ -677,6 +693,25 @@ footer p {
         font-size: 1.75rem;
     }
 
+    header .container {
+        padding: 0 var(--space-xs);
+        gap: var(--space-xs);
+    }
+
+    .header-logo {
+        max-height: 45px;
+        width: auto;
+    }
+
+    .main-nav ul {
+        gap: 2px;
+    }
+
+    .main-nav li a {
+        padding: 6px 8px;
+        font-size: 0.8rem;
+    }
+
     .hero-content {
         padding: var(--space-lg);
         margin: 0 var(--space-sm);
@@ -689,6 +724,32 @@ footer p {
     .location-item,
     .team-member {
         padding: var(--space-lg);
+    }
+}
+
+/* --- Additional Mobile Responsiveness --- */
+@media (max-width: 360px) {
+    body {
+        padding-top: 100px;
+    }
+    
+    header .container {
+        padding: 0 4px;
+        gap: 4px;
+    }
+    
+    .header-logo {
+        max-height: 40px;
+        width: auto;
+    }
+    
+    .main-nav ul {
+        gap: 1px;
+    }
+    
+    .main-nav li a {
+        padding: 4px 6px;
+        font-size: 0.75rem;
     }
 }
 
